@@ -8,17 +8,24 @@ export default function App() {
   const increment =() => {
     set_counter(counter + 1)
   }
+  const decrement =() => {
+    set_counter(counter - 1)
+  }
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
 
       <Button 
-        title='This is a butoohn! press it'
+        title='UP UP UP'
         onPress={increment} 
       />
       <Text style={styles.text}>
         COUNTER: {counter}
       </Text>
+      <Button 
+        title='DOWN DOWN DOWN'
+        onPress={decrement} 
+      />
     </View>
   );
 }
