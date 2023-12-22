@@ -1,11 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [counter, set_counter] = useState(1);
+
+  const increment =() => {
+    set_counter(counter + 1)
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
+
+      <Button 
+        title='This is a butoohn! press it'
+        onPress={increment} 
+      />
+      <Text style={styles.text}>
+        COUNTER: {counter}
+      </Text>
     </View>
   );
 }
@@ -13,8 +26,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#333',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: '#fff',
+    fontSize: 36
+  }
 });

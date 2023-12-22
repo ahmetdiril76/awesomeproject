@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "27fab6d3-666e-4135-b9e9-fa6dfe57df51"
+      }
+    },
+    "owner": "ahmet_diril"
   }
 }
