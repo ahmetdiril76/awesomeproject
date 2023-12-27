@@ -21,19 +21,24 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.boldText}>Alisha's App</Text>
+      </View>
       <StatusBar style="light" />
-
-      <Button 
-        title='UP UP UP'
-        onPress={increment} 
-      />
-      <Text style={styles.text}>
-        COUNTER: {counter}
-      </Text>
-      <Button 
-        title='DOWN DOWN DOWN!!'
-        onPress={decrement} 
-      />
+      
+      <View style={styles.body}>
+        <Button 
+          title='UP UP UP'
+          onPress={increment} 
+        />
+        <Text style={styles.text}>
+          COUNTER: {counter}
+        </Text>
+        <Button 
+          title='DOWN DOWN DOWN!!'
+          onPress={decrement} 
+        />
+      </View>
 
       < MyComponent />
     </View>
@@ -48,7 +53,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: 'black',
     fontSize: 36
+  },
+  boldText: {
+    fontWeight: 'bold'
+  },
+  header: {
+    backgroundColor: 'pink',
+    padding: 20
+  },
+  body: {
+    backgroundColor: 'yellow',
+    padding: 30
   }
 });
