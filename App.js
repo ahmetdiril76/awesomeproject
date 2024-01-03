@@ -36,11 +36,18 @@ export default function App() {
         <Text style={styles.text}>
           COUNTER: {counter}
         </Text>
-        <Text>name: {name} and age: {age}</Text>
+        
+
         <Button 
           title='DOWN DOWN DOWN!!'
           onPress={decrement} 
         />
+      </View>
+      
+      <View>
+        <Text>Enter your name: </Text> 
+        <TextInput style={styles.input} placeholder='ör. Ali Veli Deli' />
+        <Text>name: {name} and age: {age}</Text>
       </View>
 
       < MyComponent />
@@ -53,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#333',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   text: {
     color: 'black',
@@ -61,6 +68,15 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold'
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: 'red',
+    color: 'white',
+    
+    padding: 8,
+    margin: 10,
+    width: 200
   },
   header: {
     backgroundColor: 'pink',
