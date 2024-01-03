@@ -1,16 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
 import { Button as PaperButton} from 'react-native-paper';
 
 export default function App() {
-  const [counter, set_counter] = useState(1);
+  const [counter, setCounter] = useState(1);
+  const [name,setName] = useState("Ahmet");
+  const [age, setAge] = useState(47);
 
   const increment =() => {
-    set_counter(counter + 1)
+    setCounter(counter + 1)
   }
   const decrement =() => {
-    set_counter(counter - 1)
+    setCounter(counter - 1)
   }
 
   const MyComponent = () => (
@@ -34,6 +36,7 @@ export default function App() {
         <Text style={styles.text}>
           COUNTER: {counter}
         </Text>
+        <Text>name: {name} and age: {age}</Text>
         <Button 
           title='DOWN DOWN DOWN!!'
           onPress={decrement} 
