@@ -5,6 +5,7 @@ import { Button as PaperButton} from 'react-native-paper';
 
 export default function App() {
   const [counter, setCounter] = useState(1);
+  
   const [name,setName] = useState("Ahmet");
   const [age, setAge] = useState(47);
 
@@ -34,7 +35,7 @@ export default function App() {
           onPress={increment} 
         />
         <Text style={styles.text}>
-          COUNTER: {counter}
+          COUNTERkk: {counter}
         </Text>
         
 
@@ -46,8 +47,14 @@ export default function App() {
       
       <View>
         <Text>Enter your name: </Text> 
-        <TextInput style={styles.input} placeholder='ör. Ali Veli Deli' />
-        <Text>name: {name} and age: {age}</Text>
+        <TextInput 
+          // multiline
+          keyboardType='numeric'
+          style={styles.input} 
+          placeholder='ör. Ali Veli Deli' 
+          onChangeText={(value)=>setName(value)}
+        />
+        <Text style={styles.text}>name: {name} and age: {age}</Text>
       </View>
 
       < MyComponent />
@@ -58,13 +65,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#333',
+    backgroundColor: 'gray',
     alignItems: 'center',
     justifyContent: 'center'
   },
   text: {
     color: 'black',
-    fontSize: 36
+    backgroundColor: 'gray',
+    fontSize: 36,
+    padding: 10
   },
   boldText: {
     fontWeight: 'bold'
